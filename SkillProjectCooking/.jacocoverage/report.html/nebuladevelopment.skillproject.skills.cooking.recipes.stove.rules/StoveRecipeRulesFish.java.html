@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>StoveRecipeRulesFish.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SkillProjectCooking&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules</a> &gt; <span class="el_source">StoveRecipeRulesFish.java</span></div><h1>StoveRecipeRulesFish.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules;
+
+import nebuladevelopment.skillproject.food.fish.cooked.CookedAnchovies;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedCod;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedHerring;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedLobster;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedMackerel;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedPike;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedSalmon;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedSardine;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedShrimps;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedTrout;
+import nebuladevelopment.skillproject.food.fish.cooked.CookedTuna;
+import nebuladevelopment.skillproject.food.fish.raw.RawAnchovies;
+import nebuladevelopment.skillproject.food.fish.raw.RawCod;
+import nebuladevelopment.skillproject.food.fish.raw.RawHerring;
+import nebuladevelopment.skillproject.food.fish.raw.RawLobster;
+import nebuladevelopment.skillproject.food.fish.raw.RawMackerel;
+import nebuladevelopment.skillproject.food.fish.raw.RawPike;
+import nebuladevelopment.skillproject.food.fish.raw.RawSalmon;
+import nebuladevelopment.skillproject.food.fish.raw.RawSardine;
+import nebuladevelopment.skillproject.food.fish.raw.RawShrimps;
+import nebuladevelopment.skillproject.food.fish.raw.RawTrout;
+import nebuladevelopment.skillproject.food.fish.raw.RawTuna;
+import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
+
+/**
+ *
+ * @author Ivo Huntjens, I.J.
+ */
+<span class="nc" id="L36">public class StoveRecipeRulesFish</span>
+{
+    protected static final StoveRecipe anchovyRule()
+    {
+<span class="fc" id="L40">        return new StoveRecipe(RawAnchovies.class, CookedAnchovies.class);</span>
+    }
+
+    protected static final StoveRecipe codRule()
+    {
+<span class="fc" id="L45">        return new StoveRecipe(RawCod.class, CookedCod.class);</span>
+    }
+
+    protected static final StoveRecipe herringRule()
+    {
+<span class="fc" id="L50">        return new StoveRecipe(RawHerring.class, CookedHerring.class);</span>
+    }
+
+    protected static final StoveRecipe lobsterRule()
+    {
+<span class="fc" id="L55">        return new StoveRecipe(RawLobster.class, CookedLobster.class);</span>
+    }
+
+    protected static final StoveRecipe mackerelRule()
+    {
+<span class="fc" id="L60">        return new StoveRecipe(RawMackerel.class, CookedMackerel.class);</span>
+    }
+
+    protected static final StoveRecipe pikeRule()
+    {
+<span class="fc" id="L65">        return new StoveRecipe(RawPike.class, CookedPike.class);</span>
+    }
+    
+    protected static final StoveRecipe salmonRule()
+    {
+<span class="fc" id="L70">        return new StoveRecipe(RawSalmon.class, CookedSalmon.class);</span>
+    }
+    
+    protected static final StoveRecipe sardineRule()
+    {
+<span class="fc" id="L75">        return new StoveRecipe(RawSardine.class, CookedSardine.class);</span>
+    }
+    
+    protected static final StoveRecipe shrimpRule()
+    {
+<span class="fc" id="L80">        return new StoveRecipe(RawShrimps.class, CookedShrimps.class);</span>
+    }
+    
+    protected static final StoveRecipe troutRule()
+    {
+<span class="fc" id="L85">        return new StoveRecipe(RawTrout.class, CookedTrout.class);</span>
+    }
+    
+    protected static final StoveRecipe tunaRule()
+    {
+<span class="fc" id="L90">        return new StoveRecipe(RawTuna.class, CookedTuna.class);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>
