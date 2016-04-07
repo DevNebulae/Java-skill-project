@@ -6,6 +6,7 @@
 package nebuladevelopment.skillproject.skills.cooking.recipes.base.implementation;
 
 import java.util.HashSet;
+import java.util.function.Supplier;
 import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeCollector;
 
 /**
@@ -16,8 +17,13 @@ import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeCollect
 public class RecipeCollector<T> implements IRecipeCollector<T>
 {
     @Override
-    public void collectRecipes(HashSet<T> recipes)
+    public HashSet<T> mergeRecipes(Supplier<T>... recipes)
     {
-        recipes.addAll(recipes);
+        HashSet<T> recipeCollection = new HashSet<>();
+
+        for (Supplier<T> recipe : recipes)
+            recipeCollection.add(recipe.get());
+        
+        return recipeCollection;
     }
 }

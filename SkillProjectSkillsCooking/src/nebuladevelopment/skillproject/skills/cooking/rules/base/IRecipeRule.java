@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nebuladevelopment.skillproject.skills.cooking.recipes.pastry.rules;
+package nebuladevelopment.skillproject.skills.cooking.rules.base;
 
-import java.util.HashSet;
-import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeBundler;
+import java.util.function.Supplier;
 
 /**
  *
  * @author Ivo Huntjens, I.J.
+ * @param <T>
  */
-public class PastryRecipeCollector
+public interface IRecipeRule<T>
 {
+    public Supplier<T>[] getRecipeRules();
 }

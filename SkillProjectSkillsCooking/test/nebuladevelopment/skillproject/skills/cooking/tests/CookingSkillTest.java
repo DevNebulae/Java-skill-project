@@ -13,7 +13,7 @@ import nebuladevelopment.skillproject.food.meat.raw.RawBearMeat;
 import nebuladevelopment.skillproject.food.meat.raw.RawBeef;
 import nebuladevelopment.skillproject.food.meat.raw.RawRatMeat;
 import nebuladevelopment.skillproject.skills.cooking.CookingSkill;
-import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeCollector;
+import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeBundler;
 import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
 import nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules.StoveRecipeCollector;
 import org.junit.Before;
@@ -27,7 +27,7 @@ import static org.junit.Assert.*;
 public class CookingSkillTest
 {
     private final CookingSkill cookingSkill;
-    private final IRecipeCollector<StoveRecipe> stoveRecipeCollector;
+    private final IRecipeBundler<StoveRecipe> stoveRecipeCollector;
 
     public CookingSkillTest()
     {

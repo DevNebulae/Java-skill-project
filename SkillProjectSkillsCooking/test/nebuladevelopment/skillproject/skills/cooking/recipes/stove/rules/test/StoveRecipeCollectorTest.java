@@ -5,7 +5,7 @@
  */
 package nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules.test;
 
-import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeCollector;
+import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeBundler;
 import nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules.StoveRecipeCollector;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  */
 public class StoveRecipeCollectorTest
 {
-    IRecipeCollector<StoveRecipeCollector> stoveRecipes;
+    IRecipeBundler<StoveRecipeCollector> stoveRecipes;
     
     public StoveRecipeCollectorTest()
     {

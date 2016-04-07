@@ -6,14 +6,13 @@
 package nebuladevelopment.skillproject.skills.cooking.recipes.base;
 
 import java.util.HashSet;
-import java.util.function.Supplier;
 
 /**
  *
  * @author Ivo Huntjens, I.J.
  * @param <T>
  */
-public interface IRecipeMerger<T>
+public interface IRecipeBundler<T>
 {
-    public HashSet<T> mergeRecipes(Supplier<T>... recipes);
+    public void bundleRecipes(HashSet<T> recipes, HashSet<T> bundledRecipes);
 }
