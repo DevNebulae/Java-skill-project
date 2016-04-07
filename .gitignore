@@ -19,3 +19,5 @@ dist/
 nbdist/
 nbactions.xml
 .nb-gradle/
+/SkillProjectSkills/nbproject/private/
+/SkillProjectSkillsCooking/nbproject/private/

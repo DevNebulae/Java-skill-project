@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import nebuladevelopment.skillproject.food.cooked.ICooked;
+import nebuladevelopment.skillproject.skills.base.ISkill;
 import nebuladevelopment.skillproject.skills.cooking.recipes.pastry.PastryRecipe;
 import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
 
@@ -18,7 +19,7 @@ import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
  *
  * @author Ivo Huntjens, I.J.
  */
-public class CookingSkill
+public class CookingSkill implements ISkill
 {
     private final HashSet<PastryRecipe> pastryRecipes;
     private final HashMap<Class, Class> stoveRecipes;

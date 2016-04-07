@@ -14,5 +14,5 @@ import java.util.HashSet;
  */
 public interface IRecipeCollector<T>
 {
-    public HashSet<T> collectRecipes();
+    public void collectRecipes(HashSet<T> recipes);
 }
