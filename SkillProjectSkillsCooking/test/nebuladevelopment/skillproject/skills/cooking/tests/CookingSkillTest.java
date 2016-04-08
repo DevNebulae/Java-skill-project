@@ -13,9 +13,6 @@ import nebuladevelopment.skillproject.food.meat.raw.RawBearMeat;
 import nebuladevelopment.skillproject.food.meat.raw.RawBeef;
 import nebuladevelopment.skillproject.food.meat.raw.RawRatMeat;
 import nebuladevelopment.skillproject.skills.cooking.CookingSkill;
-import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipeBundler;
-import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
-import nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules.StoveRecipeCollector;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -27,18 +24,15 @@ import static org.junit.Assert.*;
 public class CookingSkillTest
 {
     private final CookingSkill cookingSkill;
-    private final IRecipeBundler<StoveRecipe> stoveRecipeCollector;
 
     public CookingSkillTest()
     {
         this.cookingSkill = new CookingSkill();
-        this.stoveRecipeCollector = new StoveRecipeCollector<>();
     }
 
     @Before
     public void setUp()
     {
-        this.cookingSkill.addStoveRecipes(this.stoveRecipeCollector.collectRecipes());
     }
 
     @Test
@@ -54,17 +48,18 @@ public class CookingSkillTest
         assertNotNull(cookedShrimps);
         assertEquals(cookedShrimps.getHealthPoints(), 3);
     }
-    
+
     @Test
-    public void testLookupMultipleStoveRecipe() throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+    public void testLookupMultipleStoveRecipe() throws NoSuchMethodException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException
+    {
         CookedMeat cookedMeat = this.cookingSkill.<CookedMeat>lookupStoveRecipe(RawBearMeat.class);
         assertNotNull(cookedMeat);
         assertEquals(cookedMeat.getHealthPoints(), 3);
-        
+
         cookedMeat = this.cookingSkill.<CookedMeat>lookupStoveRecipe(RawBeef.class);
         assertNotNull(cookedMeat);
         assertEquals(cookedMeat.getHealthPoints(), 3);
-        
+
         cookedMeat = this.cookingSkill.<CookedMeat>lookupStoveRecipe(RawRatMeat.class);
         assertNotNull(cookedMeat);
         assertEquals(cookedMeat.getHealthPoints(), 3);

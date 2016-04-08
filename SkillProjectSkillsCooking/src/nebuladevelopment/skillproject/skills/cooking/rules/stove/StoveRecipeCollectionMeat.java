@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package nebuladevelopment.skillproject.skills.cooking.recipes.stove.rules;
+package nebuladevelopment.skillproject.skills.cooking.rules.stove;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.function.Supplier;
 import nebuladevelopment.skillproject.food.meat.cooked.CookedMeat;
 import nebuladevelopment.skillproject.food.meat.raw.RawBearMeat;
 import nebuladevelopment.skillproject.food.meat.raw.RawBeef;
 import nebuladevelopment.skillproject.food.meat.raw.RawRatMeat;
+import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipe;
 import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
-import nebuladevelopment.skillproject.skills.cooking.rules.base.IRecipeRule;
+import nebuladevelopment.skillproject.skills.cooking.rules.base.IRecipeCollection;
 
 /**
  *
  * @author Ivo Huntjens, I.J.
+ * @param <T>
  */
-public class StoveRecipeRulesMeat<T> implements IRecipeRule<T>
+public class StoveRecipeCollectionMeat<T extends IRecipe> implements IRecipeCollection<T>
 {
     private final StoveRecipe bearMeatRule()
     {
@@ -37,12 +37,15 @@ public class StoveRecipeRulesMeat<T> implements IRecipeRule<T>
     }
 
     @Override
-    public Supplier<T>[] getRecipeRules()
+    public Supplier<T>[] getRecipes()
     {
-        return new Supplier<T>[]
+        Supplier<T>[] rules = new Supplier[]
         {
             this::bearMeatRule,
             this::beefRule,
             this::ratMeatRule
-        }
+        };
+
+        return rules;
     }
+}

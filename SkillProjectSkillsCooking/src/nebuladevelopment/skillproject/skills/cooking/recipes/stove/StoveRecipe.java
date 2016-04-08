@@ -5,11 +5,13 @@
  */
 package nebuladevelopment.skillproject.skills.cooking.recipes.stove;
 
+import nebuladevelopment.skillproject.skills.cooking.recipes.base.IRecipe;
+
 /**
  *
  * @author Ivo Huntjens, I.J.
  */
-public class StoveRecipe
+public class StoveRecipe implements IRecipe
 {
     private final Class input;
     private final Class output;
