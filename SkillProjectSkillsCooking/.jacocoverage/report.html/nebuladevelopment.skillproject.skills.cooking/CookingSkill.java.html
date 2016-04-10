@@ -12,8 +12,8 @@ import java.util.HashSet;
 import java.util.Map;
 import nebuladevelopment.skillproject.food.cooked.ICooked;
 import nebuladevelopment.skillproject.skills.base.ISkill;
-import nebuladevelopment.skillproject.skills.cooking.recipes.pastry.PastryRecipe;
-import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.pastry.base.PastryRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.stove.base.StoveRecipe;
 
 /**
  *
@@ -25,38 +25,18 @@ public class CookingSkill implements ISkill
     private final HashMap&lt;Class, Class&gt; stoveRecipes;
 
     public CookingSkill()
-<span class="fc" id="L28">    {</span>
-<span class="fc" id="L29">        this.pastryRecipes = new HashSet&lt;&gt;();</span>
-<span class="fc" id="L30">        this.stoveRecipes = new HashMap&lt;&gt;();</span>
-<span class="fc" id="L31">    }</span>
+<span class="nc" id="L28">    {</span>
+<span class="nc" id="L29">        this.pastryRecipes = new HashSet&lt;&gt;();</span>
+<span class="nc" id="L30">        this.stoveRecipes = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L31">    }</span>
 
-    public void addStoveRecipe(StoveRecipe recipe)
-    {
-<span class="nc" id="L35">        this.stoveRecipes.put(recipe.getInput(), recipe.getOuput());</span>
-<span class="nc" id="L36">    }</span>
 
-    public void addStoveRecipes(StoveRecipe... recipes)
+    public &lt;T extends ICooked&gt; T cook(Class foodKey) throws IllegalAccessException, IllegalArgumentException, InstantiationException, InvocationTargetException, NoSuchMethodException
     {
-<span class="nc bnc" id="L40" title="All 2 branches missed.">        for (StoveRecipe recipe : recipes)</span>
-<span class="nc" id="L41">            this.addStoveRecipe(recipe);</span>
-<span class="nc" id="L42">    }</span>
-
-    public void addStoveRecipes(HashSet&lt;StoveRecipe&gt; recipes)
-    {
-<span class="nc" id="L46">        recipes.stream().forEach((recipe) -&gt; this.addStoveRecipe(recipe));</span>
-<span class="nc" id="L47">    }</span>
-
-    public Map&lt;Class, Class&gt; getStoveRecipes()
-    {
-<span class="fc" id="L51">        return Collections.unmodifiableMap(this.stoveRecipes);</span>
-    }
-
-    public &lt;T extends ICooked&gt; T lookupStoveRecipe(Class foodKey) throws IllegalAccessException, IllegalArgumentException, InstantiationException, InvocationTargetException, NoSuchMethodException
-    {
-<span class="pc bpc" id="L56" title="1 of 2 branches missed.">        if (this.stoveRecipes.containsKey(foodKey))</span>
-<span class="nc" id="L57">            return (T) this.stoveRecipes.get(foodKey).getConstructor().newInstance();</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        if (this.stoveRecipes.containsKey(foodKey))</span>
+<span class="nc" id="L37">            return (T) this.stoveRecipes.get(foodKey).getConstructor().newInstance();</span>
         else
-<span class="fc" id="L59">            return null;</span>
+<span class="nc" id="L39">            return null;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -6,14 +6,10 @@
 package nebuladevelopment.skillproject.skills.cooking;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import nebuladevelopment.skillproject.food.cooked.ICooked;
 import nebuladevelopment.skillproject.skills.base.ISkill;
-import nebuladevelopment.skillproject.skills.cooking.recipes.pastry.PastryRecipe;
-import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.IRecipe;
 
 /**
  *
@@ -21,41 +17,30 @@ import nebuladevelopment.skillproject.skills.cooking.recipes.stove.StoveRecipe;
  */
 public class CookingSkill implements ISkill
 {
-    private final HashSet<PastryRecipe> pastryRecipes;
-    private final HashMap<Class, Class> stoveRecipes;
-
+    private final HashSet<IRecipe> recipes;
+    
     public CookingSkill()
     {
-        this.pastryRecipes = new HashSet<>();
-        this.stoveRecipes = new HashMap<>();
+        this.recipes = new HashSet<>();
     }
-
-    public void addStoveRecipe(StoveRecipe recipe)
+    
+    public void addRecipe(IRecipe recipe)
     {
-        this.stoveRecipes.put(recipe.getInput(), recipe.getOuput());
+        this.recipes.add(recipe);
     }
-
-    public void addStoveRecipes(StoveRecipe... recipes)
+    
+    public void addStoveRecipes(IRecipe... recipes)
     {
-        for (StoveRecipe recipe : recipes)
-            this.addStoveRecipe(recipe);
+        for (IRecipe recipe : recipes)
+            this.addRecipe(recipe);
     }
-
-    public void addStoveRecipes(HashSet<StoveRecipe> recipes)
-    {
-        recipes.stream().forEach((recipe) -> this.addStoveRecipe(recipe));
+    
+    public HashSet getRecipesOfType(Class type) {
+        return (HashSet) this.recipes.stream().filter(r -> r.getClass() == type);
     }
-
-    public Map<Class, Class> getStoveRecipes()
+    
+    public <T extends ICooked> T cook(Class foodKey) throws IllegalAccessException, IllegalArgumentException, InstantiationException, InvocationTargetException, NoSuchMethodException
     {
-        return Collections.unmodifiableMap(this.stoveRecipes);
-    }
-
-    public <T extends ICooked> T lookupStoveRecipe(Class foodKey) throws IllegalAccessException, IllegalArgumentException, InstantiationException, InvocationTargetException, NoSuchMethodException
-    {
-        if (this.stoveRecipes.containsKey(foodKey))
-            return (T) this.stoveRecipes.get(foodKey).getConstructor().newInstance();
-        else
-            return null;
+        return null;
     }
 }
