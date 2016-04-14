@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>FishRecipeCollection.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SkillProjectSkillsCooking&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">nebuladevelopment.skillproject.skills.cooking.recipes.policies.fish.collection</a> &gt; <span class="el_source">FishRecipeCollection.java</span></div><h1>FishRecipeCollection.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package nebuladevelopment.skillproject.skills.cooking.recipes.policies.fish.collection;
+
+import java.util.function.Supplier;
+import nebuladevelopment.skillproject.food.fish.cooked.*;
+import nebuladevelopment.skillproject.food.fish.raw.*;
+import nebuladevelopment.skillproject.skills.cooking.recipes.fish.base.FishRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.IRecipeCollection;
+
+/**
+ *
+ * @author Ivo Huntjens, I.J.
+ */
+<span class="fc" id="L18">public class FishRecipeCollection implements IRecipeCollection&lt;FishRecipe&gt;</span>
+{
+    private FishRecipe getAnchovyRecipe()
+    {
+<span class="fc" id="L22">        return new FishRecipe(RawAnchovies.class, CookedAnchovies.class);</span>
+    }
+
+    private FishRecipe getCodRecipe()
+    {
+<span class="fc" id="L27">        return new FishRecipe(RawCod.class, CookedCod.class);</span>
+    }
+
+    private FishRecipe getHerringRecipe()
+    {
+<span class="fc" id="L32">        return new FishRecipe(RawHerring.class, CookedHerring.class);</span>
+    }
+
+    private FishRecipe getLobsterRecipe()
+    {
+<span class="fc" id="L37">        return new FishRecipe(RawLobster.class, CookedLobster.class);</span>
+    }
+
+    private FishRecipe getMackerelRecipe()
+    {
+<span class="fc" id="L42">        return new FishRecipe(RawMackerel.class, CookedMackerel.class);</span>
+    }
+
+    private FishRecipe getPikeRecipe()
+    {
+<span class="fc" id="L47">        return new FishRecipe(RawPike.class, CookedPike.class);</span>
+    }
+
+    private FishRecipe getSalmonRecipe()
+    {
+<span class="fc" id="L52">        return new FishRecipe(RawSalmon.class, CookedSalmon.class);</span>
+    }
+
+    private FishRecipe getSardineRecipe()
+    {
+<span class="fc" id="L57">        return new FishRecipe(RawSardine.class, CookedSardine.class);</span>
+    }
+
+    private FishRecipe getShrimpRecipe()
+    {
+<span class="fc" id="L62">        return new FishRecipe(RawShrimps.class, CookedShrimps.class);</span>
+    }
+
+    private FishRecipe getTroutRecipe()
+    {
+<span class="fc" id="L67">        return new FishRecipe(RawTrout.class, CookedTrout.class);</span>
+    }
+
+    private FishRecipe getTunaRecipe()
+    {
+<span class="fc" id="L72">        return new FishRecipe(RawTuna.class, CookedTuna.class);</span>
+    }
+
+    @Override
+    public Supplier&lt;FishRecipe&gt;[] getRecipes()
+    {
+<span class="fc" id="L78">        return new Supplier[]</span>
+        {
+            this::getAnchovyRecipe,
+            this::getCodRecipe,
+            this::getHerringRecipe,
+            this::getLobsterRecipe,
+            this::getMackerelRecipe,
+            this::getPikeRecipe,
+            this::getSalmonRecipe,
+            this::getSardineRecipe,
+            this::getShrimpRecipe,
+            this::getTroutRecipe,
+            this::getTunaRecipe
+        };
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

@@ -14,5 +14,5 @@ import nebuladevelopment.skillproject.food.meat.base.IMeat;
  */
 public class RawBeef extends InedibleUncookedFood implements IMeat
 {
-    
+
 }

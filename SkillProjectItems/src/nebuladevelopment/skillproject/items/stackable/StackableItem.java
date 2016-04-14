@@ -14,8 +14,9 @@ import nebuladevelopment.skillproject.items.item.Item;
 public abstract class StackableItem extends Item
 {
     protected final int maximumStackSize;
-    
-    public StackableItem(int maximumStackSize, String name) {
+
+    public StackableItem(int maximumStackSize, String name)
+    {
         super(name);
         this.maximumStackSize = maximumStackSize;
     }

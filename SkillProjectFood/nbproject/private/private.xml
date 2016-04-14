@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/poultry/cooked/tests/CookedPoultryTest.java</file>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/fish/cooked/tests/CookedFishTest.java</file>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/fish/raw/tests/RawFishTest.java</file>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/meat/cooked/tests/CookedMeatTest.java</file>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/poultry/raw/tests/RawPoultryTest.java</file>
+            <file>file:/C:/Users/Ivo/Documents/GitHub/Java-skill-project/SkillProjectFood/test/nebuladevelopment/skillproject/food/meat/raw/tests/RawMeatTest.java</file>
+        </group>
     </open-files>
 </project-private>

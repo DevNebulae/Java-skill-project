@@ -25,14 +25,14 @@ public class RawPoultryTest
     public RawPoultryTest()
     {
     }
-    
+
     @Test
     public void testConstructors()
     {
         for (InedibleUncookedFood food : this.getPoultry())
             assertNotNull(food);
     }
-    
+
     @Test
     public void testInstanceOfIFood()
     {
@@ -53,7 +53,7 @@ public class RawPoultryTest
         for (InedibleUncookedFood food : this.getPoultry())
             assertThat(food, instanceOf(InedibleFood.class));
     }
-    
+
     @Test
     public void testInstanceOfIPoultry()
     {

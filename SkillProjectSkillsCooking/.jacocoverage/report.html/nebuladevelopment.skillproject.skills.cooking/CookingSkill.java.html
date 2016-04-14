@@ -6,14 +6,11 @@
 package nebuladevelopment.skillproject.skills.cooking;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.Collection;
 import java.util.HashSet;
-import java.util.Map;
 import nebuladevelopment.skillproject.food.cooked.ICooked;
 import nebuladevelopment.skillproject.skills.base.ISkill;
-import nebuladevelopment.skillproject.skills.cooking.recipes.pastry.base.PastryRecipe;
-import nebuladevelopment.skillproject.skills.cooking.recipes.stove.base.StoveRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.IRecipe;
 
 /**
  *
@@ -21,22 +18,37 @@ import nebuladevelopment.skillproject.skills.cooking.recipes.stove.base.StoveRec
  */
 public class CookingSkill implements ISkill
 {
-    private final HashSet&lt;PastryRecipe&gt; pastryRecipes;
-    private final HashMap&lt;Class, Class&gt; stoveRecipes;
+    private final HashSet&lt;IRecipe&gt; recipes;
 
     public CookingSkill()
-<span class="nc" id="L28">    {</span>
-<span class="nc" id="L29">        this.pastryRecipes = new HashSet&lt;&gt;();</span>
-<span class="nc" id="L30">        this.stoveRecipes = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L24">    {</span>
+<span class="nc" id="L25">        this.recipes = new HashSet&lt;&gt;();</span>
+<span class="nc" id="L26">    }</span>
+
+    public void addRecipe(IRecipe recipe)
+    {
+<span class="nc" id="L30">        this.recipes.add(recipe);</span>
 <span class="nc" id="L31">    }</span>
 
+    public void addRecipes(IRecipe... recipes)
+    {
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        for (IRecipe recipe : recipes)</span>
+<span class="nc" id="L36">            this.addRecipe(recipe);</span>
+<span class="nc" id="L37">    }</span>
+
+    public void addRecipes(Collection&lt;? extends IRecipe&gt; recipes)
+    {
+<span class="nc" id="L41">        recipes.forEach(recipe -&gt; this.addRecipe(recipe));</span>
+<span class="nc" id="L42">    }</span>
+
+    public HashSet getRecipesOfType(Class type)
+    {
+<span class="nc bnc" id="L46" title="All 2 branches missed.">        return (HashSet) this.recipes.stream().filter(r -&gt; r.getClass() == type);</span>
+    }
 
     public &lt;T extends ICooked&gt; T cook(Class foodKey) throws IllegalAccessException, IllegalArgumentException, InstantiationException, InvocationTargetException, NoSuchMethodException
     {
-<span class="nc bnc" id="L36" title="All 2 branches missed.">        if (this.stoveRecipes.containsKey(foodKey))</span>
-<span class="nc" id="L37">            return (T) this.stoveRecipes.get(foodKey).getConstructor().newInstance();</span>
-        else
-<span class="nc" id="L39">            return null;</span>
+<span class="nc" id="L51">        return null;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

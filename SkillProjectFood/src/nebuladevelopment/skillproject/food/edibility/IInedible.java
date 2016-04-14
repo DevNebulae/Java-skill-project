@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.food.edibility;
  */
 public interface IInedible
 {
-    
+
 }

@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.food.base;
  */
 public interface IFood
 {
-    
+
 }

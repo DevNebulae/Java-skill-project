@@ -17,5 +17,5 @@ public abstract class EdibleCookedFood extends EdibleFood implements ICooked, IE
     public EdibleCookedFood(int healthPoints)
     {
         super(healthPoints);
-    }  
+    }
 }

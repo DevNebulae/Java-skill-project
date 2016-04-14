@@ -14,5 +14,5 @@ import nebuladevelopment.skillproject.food.poultry.base.IPoultry;
  */
 public class RawChicken extends InedibleUncookedFood implements IPoultry
 {
-    
+
 }

@@ -14,5 +14,5 @@ import nebuladevelopment.skillproject.food.fish.base.IFish;
  */
 public class RawTuna extends InedibleUncookedFood implements IFish
 {
-    
+
 }

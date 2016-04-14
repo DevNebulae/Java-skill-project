@@ -8,8 +8,13 @@ package nebuladevelopment.skillproject.skills.cooking.recipes.policies.base;
 /**
  *
  * @author Ivo Huntjens, I.J.
+ * @param <T>
+ * @param <U>
+ * @param <V>
  */
-public interface IRecipe
+public interface IRecipe<T, U extends T, V extends T>
 {
-    
+    public Class<U> getIngredient();
+
+    public Class<V> getOutput();
 }

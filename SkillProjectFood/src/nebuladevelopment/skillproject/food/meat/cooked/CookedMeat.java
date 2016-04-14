@@ -15,9 +15,9 @@ import nebuladevelopment.skillproject.food.meat.base.IMeat;
 public class CookedMeat extends EdibleCookedFood implements IMeat
 {
     private static final int HEALTHPOINTS = 3;
-    
+
     public CookedMeat()
     {
         super(HEALTHPOINTS);
-    }  
+    }
 }

@@ -14,5 +14,5 @@ import nebuladevelopment.skillproject.food.edibility.IInedible;
  */
 public abstract class InedibleUncookedFood extends InedibleFood implements IInedible, IUncooked
 {
-    
+
 }

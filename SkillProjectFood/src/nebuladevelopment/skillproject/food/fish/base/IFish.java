@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.food.fish.base;
  */
 public interface IFish
 {
-    
+
 }

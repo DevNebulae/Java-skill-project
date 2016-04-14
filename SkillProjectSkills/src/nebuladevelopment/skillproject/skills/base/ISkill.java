@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.skills.base;
  */
 public interface ISkill
 {
-    
+
 }

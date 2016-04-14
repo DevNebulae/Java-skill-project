@@ -13,5 +13,5 @@ import nebuladevelopment.skillproject.food.base.IFood;
  */
 public abstract class InedibleFood implements IFood
 {
-    
+
 }

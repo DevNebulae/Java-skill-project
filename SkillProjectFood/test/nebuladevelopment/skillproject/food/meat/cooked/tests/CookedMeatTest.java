@@ -26,7 +26,7 @@ public class CookedMeatTest
     public CookedMeatTest()
     {
     }
-    
+
     @Test
     public void testConstructors()
     {
@@ -68,7 +68,7 @@ public class CookedMeatTest
         for (EdibleCookedFood food : this.getMeat())
             assertThat(food, instanceOf(IFood.class));
     }
-    
+
     @Test
     public void testInstanceOfIMeat()
     {

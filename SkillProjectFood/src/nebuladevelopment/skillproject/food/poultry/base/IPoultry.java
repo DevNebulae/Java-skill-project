@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.food.poultry.base;
  */
 public interface IPoultry
 {
-    
+
 }

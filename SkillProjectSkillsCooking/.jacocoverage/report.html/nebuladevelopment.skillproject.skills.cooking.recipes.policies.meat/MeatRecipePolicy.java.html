@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>MeatRecipePolicy.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SkillProjectSkillsCooking&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">nebuladevelopment.skillproject.skills.cooking.recipes.policies.meat</a> &gt; <span class="el_source">MeatRecipePolicy.java</span></div><h1>MeatRecipePolicy.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package nebuladevelopment.skillproject.skills.cooking.recipes.policies.meat;
+
+import java.util.HashSet;
+import nebuladevelopment.skillproject.skills.cooking.recipes.meat.base.MeatRecipe;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.IRecipePolicy;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.implementation.RecipePolicy;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.meat.collection.MeatRecipeCollection;
+
+/**
+ *
+ * @author Ivo Huntjens, I.J.
+ */
+public class MeatRecipePolicy extends RecipePolicy&lt;MeatRecipe&gt; implements IRecipePolicy&lt;MeatRecipe&gt;
+{
+    private final MeatRecipeCollection recipeCollection;
+    
+<span class="fc" id="L22">    public MeatRecipePolicy() {</span>
+<span class="fc" id="L23">        this.recipeCollection = new MeatRecipeCollection();</span>
+<span class="fc" id="L24">    }</span>
+
+    @Override
+    public HashSet&lt;MeatRecipe&gt; getRecipePolicy()
+    {
+<span class="fc" id="L29">        return this.getRecipes(this.recipeCollection.getRecipes());</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

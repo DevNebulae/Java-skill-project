@@ -15,7 +15,7 @@ import nebuladevelopment.skillproject.food.poultry.base.IPoultry;
 public class CookedChicken extends EdibleCookedFood implements IPoultry
 {
     private static final int HEALTHPOINTS = 3;
-    
+
     public CookedChicken()
     {
         super(HEALTHPOINTS);

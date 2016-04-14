@@ -23,18 +23,18 @@ import static org.junit.Assert.*;
  * @author Ivo Huntjens, I.J.
  */
 public class RawMeatTest
-{ 
+{
     public RawMeatTest()
     {
     }
-    
+
     @Test
     public void testConstructors()
     {
         for (InedibleUncookedFood food : this.getMeat())
             assertNotNull(food);
     }
-    
+
     @Test
     public void testInstanceOfIFood()
     {
@@ -55,7 +55,7 @@ public class RawMeatTest
         for (InedibleUncookedFood food : this.getMeat())
             assertThat(food, instanceOf(InedibleFood.class));
     }
-    
+
     @Test
     public void testInstanceOfIMeat()
     {
@@ -69,9 +69,11 @@ public class RawMeatTest
         for (InedibleUncookedFood food : this.getMeat())
             assertThat(food, instanceOf(IUncooked.class));
     }
-    
-    private InedibleUncookedFood[] getMeat() {
-        return new InedibleUncookedFood[] {
+
+    private InedibleUncookedFood[] getMeat()
+    {
+        return new InedibleUncookedFood[]
+        {
             new RawBearMeat(),
             new RawBeef(),
             new RawRatMeat()

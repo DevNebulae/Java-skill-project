@@ -15,8 +15,9 @@ import nebuladevelopment.skillproject.food.fish.base.IFish;
 public class CookedCod extends EdibleCookedFood implements IFish
 {
     private static final int HEALTHPOINTS = 3;
-    
-    public CookedCod() {
+
+    public CookedCod()
+    {
         super(HEALTHPOINTS);
     }
 }

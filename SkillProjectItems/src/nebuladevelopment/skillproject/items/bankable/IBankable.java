@@ -11,5 +11,5 @@ package nebuladevelopment.skillproject.items.bankable;
  */
 public interface IBankable
 {
-    
+
 }

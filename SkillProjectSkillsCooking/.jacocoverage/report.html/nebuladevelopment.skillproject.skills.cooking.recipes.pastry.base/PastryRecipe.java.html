@@ -5,12 +5,20 @@
  */
 package nebuladevelopment.skillproject.skills.cooking.recipes.pastry.base;
 
+import nebuladevelopment.skillproject.food.pastry.base.IPastry;
+import nebuladevelopment.skillproject.skills.cooking.recipes.policies.base.implementation.Recipe;
+
 /**
  *
  * @author Ivo Huntjens, I.J.
+ * @param &lt;U&gt;
+ * @param &lt;V&gt;
  */
-<span class="nc" id="L12">public class PastryRecipe</span>
+public class PastryRecipe&lt;U extends IPastry, V extends IPastry&gt; extends Recipe&lt;IPastry, U, V&gt;
 {
-    
+    public PastryRecipe(Class&lt;U&gt; ingredient, Class&lt;V&gt; output)
+    {
+<span class="nc" id="L21">        super(ingredient, output);</span>
+<span class="nc" id="L22">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.5.201505241946</span></div></body></html>

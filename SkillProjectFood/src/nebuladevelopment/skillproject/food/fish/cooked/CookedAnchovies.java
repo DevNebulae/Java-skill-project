@@ -15,10 +15,10 @@ import nebuladevelopment.skillproject.food.fish.base.IFish;
 public class CookedAnchovies extends EdibleCookedFood implements IFish
 {
     private static final int HEALTHPOINTS = 1;
-    
+
     public CookedAnchovies()
     {
         super(HEALTHPOINTS);
     }
-    
+
 }
